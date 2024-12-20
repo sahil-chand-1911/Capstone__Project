@@ -1,0 +1,245 @@
+/* Reset and Custom Properties */
+:root {
+    --primary-bg: black;
+    --text-white: white;
+    --text-white-60: rgba(255, 255, 255, 0.60);
+    --border-color: rgba(255, 255, 255, 0.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Base Styles */
+body {
+    background: var(--primary-bg);
+    color: var(--text-white);
+    font-family: 'Archivo', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 0 48px;
+}
+
+/* Navigation Styles */
+.nav-container {
+    height: 72px;
+    padding-top: 16px;
+}
+
+.nav-content {
+    width: 1080px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    background: rgba(146, 141, 211, 0.06);
+    backdrop-filter: blur(96px);
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.nav-links a, .nav-right a{
+    color: white;
+}
+
+.logo {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 42px;
+    line-height: 42px;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 72px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 120px;
+    margin-bottom: 32px;
+}
+
+.hero img {
+    width: 1344px;
+    height: 672px;
+    border-radius: 22px;
+}
+
+/* Projects Grid Styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 32px 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+.project-card p {
+    color: var(--text-white-60);
+}
+
+/* Impact Section Styles */
+.impact {
+    padding: 32px 0;
+}
+
+.impact h2 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 32px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 50%;
+    margin-inline-start: auto;
+}
+
+.stat-card {
+    padding: 16px 0 32px;
+    border-top: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 52px;
+}
+
+.stat-card p {
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+/* Bio Section Styles */
+.bio {
+    padding: 72px 0;
+    text-align: center;
+}
+
+.bio p {
+    font-family: 'Chivo', sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 400;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+    padding: 72px 0 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--text-white-60);
+    font-family: 'Chivo', sans-serif;
+    font-size: 28px;
+}
+
+.contact-btn {
+    padding: 8px 16px;
+    border-radius: 22px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-white);
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: var(--text-white);
+    color: var(--primary-bg);
+}
+
+/* Media Queries */
+@media (max-width: 1400px) {
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-content {
+        width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 80px;
+        line-height: 88px;
+    }
+    
+    .bio p {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 24px;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
